@@ -1,19 +1,63 @@
-/**
- * This is the main entrypoint to your Probot app
- * @param {import('probot').Application} app
- */
+const _ = require('lodash');
+const commands = require('probot-commands');
+
 module.exports = app => {
-  // Your code here
-  app.log('Yay, the app was loaded!')
+  app.log('Starting assignbot...');
 
-  app.on('issues.opened', async context => {
-    const issueComment = context.issue({ body: 'Thanks for opening this issue!' })
-    return context.github.issues.createComment(issueComment)
-  })
+  commands(app, 'assign', async (ctx, cmd) => {
+    const match = /@([^\s]+)/g.exec(cmd.arguments);
+    if (match.length < 2) return
 
-  // For more information on building apps:
-  // https://probot.github.io/docs/
+    const username = match[1];
 
-  // To get your app running against GitHub, see:
-  // https://probot.github.io/docs/development/
+    const inviteUser = async () => {
+      try {
+        await ctx.github.repos.addCollaborator({
+          ...ctx.issue(),
+          username: username,
+          permission: 'pull',
+        });
+
+      } catch(err) {
+        return app.log(`error inviting user: ${err}`);
+      }
+    }
+
+    try {
+      await ctx.github.issues.checkAssignee({
+        ...ctx.issue(),
+        assignee: username,
+      });
+    } catch {
+      app.log(`Inviting: ${username}`);
+      return inviteUser();
+    }
+
+    app.log(`Adding ${username}`);
+    await ctx.github.issues.addAssignees({
+      ...ctx.issue(),
+      assignees: [
+        username,
+      ],
+    });
+  });
+
+  app.on('member.added', async (ctx, cmd) => {
+    const username = ctx.payload.member.login;
+
+    const result = await ctx.github.search.issues({
+      q: `mentions:${username} type:issue repo:grampelberg/assignbot in:comments`
+    });
+
+    _.each(result.data.items, async item => {
+      await ctx.github.issues.addAssignees({
+        owner: ctx.payload.repository.owner.login,
+        repo: ctx.payload.repository.name,
+        number: item.number,
+        assignees: [
+          ctx.payload.member.login,
+        ],
+      });
+    });
+  });
 }
