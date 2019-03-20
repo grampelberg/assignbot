@@ -1,16 +1,16 @@
 {
   "action": "created",
   "issue": {
-    "url": "https://api.github.com/repos/grampelberg/assignbot/issues/5",
+    "url": "https://api.github.com/repos/grampelberg/assignbot/issues/2",
     "repository_url": "https://api.github.com/repos/grampelberg/assignbot",
-    "labels_url": "https://api.github.com/repos/grampelberg/assignbot/issues/5/labels{/name}",
-    "comments_url": "https://api.github.com/repos/grampelberg/assignbot/issues/5/comments",
-    "events_url": "https://api.github.com/repos/grampelberg/assignbot/issues/5/events",
-    "html_url": "https://github.com/grampelberg/assignbot/issues/5",
-    "id": 422810459,
-    "node_id": "MDU6SXNzdWU0MjI4MTA0NTk=",
-    "number": 5,
-    "title": "raf",
+    "labels_url": "https://api.github.com/repos/grampelberg/assignbot/issues/2/labels{/name}",
+    "comments_url": "https://api.github.com/repos/grampelberg/assignbot/issues/2/comments",
+    "events_url": "https://api.github.com/repos/grampelberg/assignbot/issues/2/events",
+    "html_url": "https://github.com/grampelberg/assignbot/issues/2",
+    "id": 422803062,
+    "node_id": "MDU6SXNzdWU0MjI4MDMwNjI=",
+    "number": 2,
+    "title": "raboof",
     "user": {
       "login": "grampelberg",
       "id": 47992,
@@ -36,24 +36,62 @@
     ],
     "state": "open",
     "locked": false,
-    "assignee": null,
+    "assignee": {
+      "login": "fishtank-xx",
+      "id": 433010,
+      "node_id": "MDQ6VXNlcjQzMzAxMA==",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/433010?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/fishtank-xx",
+      "html_url": "https://github.com/fishtank-xx",
+      "followers_url": "https://api.github.com/users/fishtank-xx/followers",
+      "following_url": "https://api.github.com/users/fishtank-xx/following{/other_user}",
+      "gists_url": "https://api.github.com/users/fishtank-xx/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/fishtank-xx/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/fishtank-xx/subscriptions",
+      "organizations_url": "https://api.github.com/users/fishtank-xx/orgs",
+      "repos_url": "https://api.github.com/users/fishtank-xx/repos",
+      "events_url": "https://api.github.com/users/fishtank-xx/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/fishtank-xx/received_events",
+      "type": "User",
+      "site_admin": false
+    },
     "assignees": [
-
+      {
+        "login": "fishtank-xx",
+        "id": 433010,
+        "node_id": "MDQ6VXNlcjQzMzAxMA==",
+        "avatar_url": "https://avatars2.githubusercontent.com/u/433010?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/fishtank-xx",
+        "html_url": "https://github.com/fishtank-xx",
+        "followers_url": "https://api.github.com/users/fishtank-xx/followers",
+        "following_url": "https://api.github.com/users/fishtank-xx/following{/other_user}",
+        "gists_url": "https://api.github.com/users/fishtank-xx/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/fishtank-xx/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/fishtank-xx/subscriptions",
+        "organizations_url": "https://api.github.com/users/fishtank-xx/orgs",
+        "repos_url": "https://api.github.com/users/fishtank-xx/repos",
+        "events_url": "https://api.github.com/users/fishtank-xx/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/fishtank-xx/received_events",
+        "type": "User",
+        "site_admin": false
+      }
     ],
     "milestone": null,
-    "comments": 1,
-    "created_at": "2019-03-19T15:49:49Z",
-    "updated_at": "2019-03-19T15:54:33Z",
+    "comments": 7,
+    "created_at": "2019-03-19T15:36:54Z",
+    "updated_at": "2019-03-20T22:45:44Z",
     "closed_at": null,
     "author_association": "OWNER",
     "body": ""
   },
   "comment": {
-    "url": "https://api.github.com/repos/grampelberg/assignbot/issues/comments/474439291",
-    "html_url": "https://github.com/grampelberg/assignbot/issues/5#issuecomment-474439291",
-    "issue_url": "https://api.github.com/repos/grampelberg/assignbot/issues/5",
-    "id": 474439291,
-    "node_id": "MDEyOklzc3VlQ29tbWVudDQ3NDQzOTI5MQ==",
+    "url": "https://api.github.com/repos/grampelberg/assignbot/issues/comments/475058098",
+    "html_url": "https://github.com/grampelberg/assignbot/issues/2#issuecomment-475058098",
+    "issue_url": "https://api.github.com/repos/grampelberg/assignbot/issues/2",
+    "id": 475058098,
+    "node_id": "MDEyOklzc3VlQ29tbWVudDQ3NTA1ODA5OA==",
     "user": {
       "login": "grampelberg",
       "id": 47992,
@@ -74,10 +112,10 @@
       "type": "User",
       "site_admin": false
     },
-    "created_at": "2019-03-19T15:54:33Z",
-    "updated_at": "2019-03-19T15:54:33Z",
+    "created_at": "2019-03-20T22:45:44Z",
+    "updated_at": "2019-03-20T22:45:44Z",
     "author_association": "OWNER",
-    "body": "/assign @grampelberg "
+    "body": "/assign @fishtank-xx "
   },
   "repository": {
     "id": 176383235,
@@ -146,14 +184,14 @@
     "releases_url": "https://api.github.com/repos/grampelberg/assignbot/releases{/id}",
     "deployments_url": "https://api.github.com/repos/grampelberg/assignbot/deployments",
     "created_at": "2019-03-18T23:05:36Z",
-    "updated_at": "2019-03-19T15:29:03Z",
-    "pushed_at": "2019-03-19T15:29:02Z",
+    "updated_at": "2019-03-20T17:56:04Z",
+    "pushed_at": "2019-03-20T17:56:03Z",
     "git_url": "git://github.com/grampelberg/assignbot.git",
     "ssh_url": "git@github.com:grampelberg/assignbot.git",
     "clone_url": "https://github.com/grampelberg/assignbot.git",
     "svn_url": "https://github.com/grampelberg/assignbot",
     "homepage": null,
-    "size": 0,
+    "size": 81,
     "stargazers_count": 0,
     "watchers_count": 0,
     "language": "JavaScript",
@@ -199,7 +237,7 @@
     "site_admin": false
   },
   "installation": {
-    "id": 762757,
-    "node_id": "MDIzOkludGVncmF0aW9uSW5zdGFsbGF0aW9uNzYyNzU3"
+    "id": 767097,
+    "node_id": "MDIzOkludGVncmF0aW9uSW5zdGFsbGF0aW9uNzY3MDk3"
   }
 }

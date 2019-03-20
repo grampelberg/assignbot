@@ -5,6 +5,17 @@ module.exports = app => {
   app.log('Starting assignbot...');
 
   commands(app, 'assign', async (ctx, cmd) => {
+    const result = await ctx.github.repos.getCollaboratorPermissionLevel({
+      ...ctx.issue(),
+      username: ctx.payload.sender.login,
+    })
+
+    if (!_.includes(['admin', 'write'], result.data.permission))
+      return await ctx.github.issues.deleteComment({
+        ...ctx.issue(),
+        comment_id: ctx.payload.comment.id,
+      });
+
     const match = /@([^\s]+)/g.exec(cmd.arguments);
     if (match.length < 2) return
 
@@ -28,7 +39,7 @@ module.exports = app => {
         ...ctx.issue(),
         assignee: username,
       });
-    } catch {
+    } catch(err) {
       app.log(`Inviting: ${username}`);
       return inviteUser();
     }
