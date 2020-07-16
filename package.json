@@ -20,7 +20,7 @@
     "test:watch": "jest --watch --notify --notifyMode=change --coverage"
   },
   "dependencies": {
-    "lodash": "^4.17.13",
+    "lodash": "^4.17.19",
     "probot": "^7.2.0",
     "probot-commands": "^1.1.0"
   },
